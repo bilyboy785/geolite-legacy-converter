@@ -67,4 +67,8 @@ I wrote a script to download and update latest release from [https://dl.miyuru.l
 ./autoupdate.sh
 ```
 
-Script ask u the output path for DAT files, download and extract them.
+Script ask u the output path for DAT files, download and extract them. Or u can specify the path if you add it in cron :
+
+```
+./autoupdate.sh /etc/nginx/geoip
+```

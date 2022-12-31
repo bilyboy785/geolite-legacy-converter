@@ -6,8 +6,13 @@ CITY_IPV4="https://dl.miyuru.lk/geoip/maxmind/city/maxmind4.dat.gz"
 CITY_IPV6="https://dl.miyuru.lk/geoip/maxmind/city/maxmind6.dat.gz"
 DEFAULT_PATH="./GeoLite"
 
-read -p "Full Path to store dat files : (default : ./GeoLite) " OUTPUT_PATH
-OUTPUT_PATH="${OUTPUT_PATH:=${DEFAULT_PATH}}"
+if [[ ! -z $1 ]]; then
+    OUTPUT_PATH=$1
+else
+    read -p "Full Path to store dat files : (default : ./GeoLite) " OUTPUT_PATH
+    OUTPUT_PATH="${OUTPUT_PATH:=${DEFAULT_PATH}}"
+fi
+
 
 if [[ ! -d ${OUTPUT_PATH} ]]; then
     mkdir -p ${OUTPUT_PATH}
