@@ -59,3 +59,12 @@ Run the docker in the current directory, with two ZIP files downloaded :
 ```
 docker run -it -v $(pwd):/src geolite-legacy-converter:latest -i /src/GeoLite2-City-CSV_20221230.zip -o /src/GeoIP-City.dat
 ```
+
+## Autoupdate script
+I wrote a script to download and update latest release from [https://dl.miyuru.lk](https://dl.miyuru.lk).
+
+```
+./autoupdate.sh
+```
+
+Script ask u the output path for DAT files, download and extract them.
