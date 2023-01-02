@@ -18,7 +18,6 @@ if [[ ! -d ${OUTPUT_PATH} ]]; then
     mkdir -p ${OUTPUT_PATH}
 fi
 
-echo "Downloading GZ files"
 case $2 in 
     ipv4)
         wget -q -O ${OUTPUT_PATH}/geolite-country-ipv4.dat.gz ${COUNTRY_IPV4}
