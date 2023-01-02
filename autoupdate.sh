@@ -37,5 +37,5 @@ esac
 
 for GZIP_FILE in $(find ${OUTPUT_PATH} -type f -name "*.gz")
 do
-    gunzip $GZIP_FILE
+    gunzip -o $GZIP_FILE
 done
